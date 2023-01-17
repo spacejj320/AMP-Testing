@@ -1,0 +1,676 @@
+<!doctype html>
+<html ⚡ lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+    <link rel="canonical" href="/article.html">
+    <link rel="shortcut icon" href="amp_favicon.png">
+    <title>News Article</title>
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+    <style amp-custom>
+       :root {
+      --color-primary: #005AF0;
+      --space-1: .5rem;  /* 8px */
+      --space-4: 2rem;   /* 32px */
+    }
+
+    /* Styles for the flex layout based tabs */
+    amp-selector[role=tablist].tabs-with-flex {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    amp-selector[role=tablist].tabs-with-flex [role=tab] {
+        flex-grow: 1;
+        /* custom styling, feel free to change */
+        text-align: center;
+        padding-top: var(--space-1);
+        padding-bottom: var(--space-1);
+    }
+    amp-selector[role=tablist].tabs-with-flex [role=tab][selected] {
+        outline: none;
+        /* custom styling, feel free to change */
+        border-bottom: 2px solid var(--color-primary);
+    }
+    amp-selector[role=tablist].tabs-with-flex [role=tabpanel] {
+        display: none;
+        width: 100%;
+        order: 1; /* must be greater than the order of the tab buttons to flex to the next line */
+        /* custom styling, feel free to change */
+        padding-top: var(--space-4);
+        padding-bottom: var(--space-4);
+    }
+    amp-selector[role=tablist].tabs-with-flex [role=tab][selected] + [role=tabpanel] {
+        display: block;
+    }
+
+    /* Styles for the selector based tabs */
+    amp-selector[role=tablist].tabs-with-selector {
+        display: flex;
+    }
+    amp-selector[role=tablist].tabs-with-selector [role=tab][selected] {
+        outline: none;
+        /* custom styling, feel free to change */
+        border-bottom: 2px solid var(--color-primary);
+    }
+    amp-selector[role=tablist].tabs-with-selector {
+        display: flex;
+    }
+    amp-selector[role=tablist].tabs-with-selector [role=tab] {
+      /* custom styling, feel free to change */
+      width: 100%;
+      text-align: center;
+      padding-top: var(--space-1);
+      padding-bottom: var(--space-1);
+    }
+    amp-selector.tabpanels [role=tabpanel] {
+      display: none;
+      /* custom styling, feel free to change */
+      padding-top: var(--space-4);
+      padding-bottom: var(--space-4);
+    }
+    amp-selector.tabpanels [role=tabpanel][selected] {
+      outline: none;
+      display: block;
+    }
+    amp-selector[role=tablist] [role=tab][selected] + [role=tabpanel] {
+  display: block;
+}
+      amp-fit-text {
+    white-space: normal;
+}
+.home-button {
+  margin-top: 8px;
+}
+.headerbar {
+  height: 60px;
+  position: relative;
+  z-index: 999;
+  top: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+.main-title{
+  font-size: 30px;
+    font-weight: 700;
+    margin: 0;
+    
+}
+.site-name {
+  margin-left: 10px;
+}
+article {
+  margin-top: 50px;
+}
+      body {
+        width: auto;
+        margin: 0;
+        padding: 0;
+        font-family: 'Open Sans', sans-serif;
+      }
+a{
+  text-decoration: none;
+  color: #000;
+}
+      header {
+        background: #fff;
+        color: #000;
+        font-size: 2em;
+        text-align: center;
+      }
+      .main-para{
+        margin:0 0 30px 0;
+        padding: 0;
+        font-size: 18px;
+    color: #7f7f7f;
+    padding-top: 10px;
+    line-height: 1.5;
+      }
+      .main-cta{
+        background: #00ADEE;
+    color: #fff;
+    border-radius: 5px;
+    font-size: 18px;
+    text-decoration: none;
+    padding: 10px 20px;
+      }
+      .banner-wrapper {
+        margin:  0 25px;
+        
+      }
+     
+      .resource-card{
+        margin: 30px;
+    border: 2px solid #005AF0;
+    border-radius: 5px;
+      }
+      .resource-text{
+        font-size: 23px;
+    padding: 15px;
+      }
+      .text-wrapper{
+        margin:  0 25px;
+        box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+        background-color: #fff;
+      }
+      .red-box{
+        background-image: url(/mhealth-1.jpg);
+    height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+      }
+      .blue-box{
+        background-image: url(/crm-healthcare.jpg);
+    height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+        
+      }
+      .green-box{
+        background-image: url(/interoperability.jpg);
+    height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+      }
+      .feedback-cards{
+        height: 100%;
+    display: flex;
+    align-items: center;
+    
+      }
+      .feedback-wrap{
+        padding: 35px 25px;
+      }
+      .hamburger{
+        margin-right: 15px;
+      }
+      .home-button{
+        margin-left: 15px;
+      }
+     .side-bar{
+      width: 50%;
+     }
+     .sub-heading{
+      text-align: center;
+      font-weight: bold;
+      line-height: 1.5;
+      margin: 35px 25px;
+     }
+     .sub-heading::after{
+      content: "";
+    border-bottom: 5px solid #FFB31C;
+    width: 100px;
+    position: absolute;
+    height: 10px;
+    right: 161px;
+    margin-top: 32px;
+     }
+     .feedback-section{
+      background-color: #EFEFEF;
+     }
+     .sub-para{
+      line-height: 1.5;
+      text-align: center;
+      margin: 35px 25px;
+     }
+     .card-para{
+      line-height: 1.5;
+      text-align: center;
+      margin: 5px 15px 30px 15px;
+     }
+     .primary-blue{
+color: #00ADEE;
+     }
+     .view-card-text{
+      background: #00A79D;
+    font-size: 1.5em;
+    font-weight: 700;
+    color: #fff;
+    height: 53px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+     }
+     .market-card{
+      display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 2px 5px 0 rgb(0 0 0 / 16%), 0 2px 10px 0 rgb(0 0 0 / 12%);
+    border-radius: .25rem;
+    margin: 25px 25px;
+    
+     }
+     .card-wrap{
+      margin-top: 25px;
+     }
+     .cta-wrap{
+      display: flex;
+      justify-content: center;
+      padding-bottom: 35px;
+     }
+     .feedback-div{
+      padding-top: 17px;
+      text-align: center;
+     }
+     .feedback-div-text{
+       font-size: 17px;
+       padding: 0 30px;
+      }
+     .service-title{
+      margin: 0;
+     }
+     .amp-carousel-button{
+      display: none;
+     }
+     .carousel-prev,
+.carousel-next {
+  filter: drop-shadow(0px 1px 2px #4a4a4a);
+  width: 40px;
+  height: 40px;
+  padding: 20px;
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
+
+.carousel-prev {
+  background-image: url('data:image/svg+xml;charset=utf-8,<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path  d="M14,7.4 L9.4,12 L14,16.6" fill="none" stroke="#fff" stroke-width="2px" stroke-linejoin="round" stroke-linecap="round" /></svg>');
+}
+
+.carousel-next {
+  background-image: url('data:image/svg+xml;charset=utf-8,<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path  d="M10,7.4 L14.6,12 L10,16.6" fill="none" stroke="#fff" stroke-width="2px" stroke-linejoin="round" stroke-linecap="round" /></svg>');
+}
+    
+    </style>
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+    <script type="application/ld+json">
+    {
+     "@context": "http://schema.org",
+     "@type": "NewsArticle",
+     "mainEntityOfPage":{
+       "@type":"WebPage",
+       "@id":"https://example.com/my-article.html"
+     },
+     "headline": "My First AMP Article",
+     "image": {
+       "@type": "ImageObject",
+       "url": "https://example.com/article_thumbnail1.jpg",
+       "height": 800,
+       "width": 800
+     },
+     "datePublished": "2015-02-05T08:00:00+08:00",
+     "dateModified": "2015-02-05T09:20:00+08:00",
+     "author": {
+       "@type": "Person",
+       "name": "John Doe"
+     },
+     "publisher": {
+       "@type": "Organization",
+       "name": "⚡ AMP Times",
+       "logo": {
+         "@type": "ImageObject",
+         "url": "https://example.com/amptimes_logo.jpg",
+         "width": 600,
+         "height": 60
+       }
+     },
+     "description": "My first experience in an AMPlified world"
+    }
+    </script>
+ 
+    <script async custom-element="amp-carousel" src="https://cdn.ampproject.org/v0/amp-carousel-0.1.js"></script>
+    <script async custom-element="amp-sidebar" src="https://cdn.ampproject.org/v0/amp-sidebar-0.1.js"></script>
+    
+    <script async custom-element="amp-selector" src="https://cdn.ampproject.org/v0/amp-selector-0.1.js"></script>
+  </head>
+  <body>
+    <header class="headerbar">
+      <a href="homepage.html">
+        <amp-img class="home-button" src="/logo.svg" width="112" height="36"></amp-img>
+      </a>
+      <div role="button" on="tap:sidebar1.toggle" tabindex="0" class="hamburger">☰</div>
+    </header>
+    <amp-sidebar id="sidebar1" layout="nodisplay" side="right" class="side-bar">
+      <amp-nested-menu layout="fill">
+        <ul>
+          <li>
+            <h4 amp-nested-submenu-open>Markets</h4>
+            <div amp-nested-submenu>
+              <ul>
+                <li>
+                  <h4 amp-nested-submenu-close>go back</h4>
+                </li>
+                <li>
+                 <a href="#">HIT Vendors</a>
+                </li>
+                <li>
+                  <a href="#">Markets</a>
+                 </li>
+                 <li>
+                  <a href="#">Markets</a>
+                 </li>
+                 <li>
+                  <a href="#">Markets</a>
+                 </li>
+              </ul>
+            </div>
+          </li>
+          <li>
+            <h4 amp-nested-submenu-open>Markets</h4>
+            <div amp-nested-submenu>
+              <ul>
+                <li>
+                  <h4 amp-nested-submenu-close>go back</h4>
+                </li>
+                <li>
+                 <a href="#">HIT Vendors</a>
+                </li>
+                <li>
+                  <a href="#">Markets</a>
+                 </li>
+                 <li>
+                  <a href="#">Markets</a>
+                 </li>
+                 <li>
+                  <a href="#">Markets</a>
+                 </li>
+              </ul>
+            </div>
+          </li>
+          <li>
+            <h4 amp-nested-submenu-open>Markets</h4>
+            <div amp-nested-submenu>
+              <ul>
+                <li>
+                  <h4 amp-nested-submenu-close>go back</h4>
+                </li>
+                <li>
+                 <a href="#">HIT Vendors</a>
+                </li>
+                <li>
+                  <a href="#">Markets</a>
+                 </li>
+                 <li>
+                  <a href="#">Markets</a>
+                 </li>
+                 <li>
+                  <a href="#">Markets</a>
+                 </li>
+              </ul>
+            </div>
+          </li>
+          <li>
+            <h4 amp-nested-submenu-open>Markets</h4>
+            <div amp-nested-submenu>
+              <ul>
+                <li>
+                  <h4 amp-nested-submenu-close>go back</h4>
+                </li>
+                <li>
+                 <a href="#">HIT Vendors</a>
+                </li>
+                <li>
+                  <a href="#">Markets</a>
+                 </li>
+                 <li>
+                  <a href="#">Markets</a>
+                 </li>
+                 <li>
+                  <a href="#">Markets</a>
+                 </li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+      </amp-nested-menu>
+      
+      
+    </amp-sidebar>
+    <amp-carousel height="300" layout="fixed-height" type="slides" role="region" aria-label="Carousel with arbitrary HTML content" autoplay delay="2000" loop>
+      <div>
+        <div class="blue-box" >
+          <div class="banner-wrapper">
+            <h2 class="main-title">Solutions Built to Scale</h2>
+          <p class="main-para">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum, necess</p>
+          <a href="#" class="main-cta">Know more</a>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="red-box">
+          <div class="banner-wrapper">
+            <h2 class="main-title">mHealth Excellence</h2>
+          <p class="main-para">Engagement across the care continuum made easy through mobile-first solutions</p>
+          <a href="#" class="main-cta">Know more</a>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="green-box">
+          <div class="banner-wrapper">
+            <h2 class="main-title">Patient-Centric Approach with CRM</h2>
+          <p class="main-para">Design & track healthcare consumer journey in real-time with MS Dynamics 365</p>
+          <a href="#" class="main-cta">Know more</a>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="red-box">
+          <div class="banner-wrapper">
+            <h2 class="main-title">Interoperability Services</h2>
+          <p class="main-para">Leverage healthcare standards and aggregate data from silos to improve care outcomes</p>
+          <a href="#" class="main-cta">Know more</a>
+          </div>
+        </div>
+      </div>
+    </amp-carousel>
+   <div >
+    <h2 class="sub-heading">We Develop Impactful <span class="primary-blue">Healthcare IT Solutions</span>
+      That Make a Difference</h2>
+      <p class="sub-para">Our clients choose us for our awareness of the healthcare ecosystem, governing regulations, and the quality we empirically demonstrate through disciplined solutions development. Through the latest technology knowledge, low overhead governance, and ownership of client objectives, we have made life easier for them over the past decade.</p>
+   </div>
+   <div>
+    <a href="#" class="market-card">
+<div class="card-wrap"><amp-img src="/vendors-icon.png"
+  width="50"
+  height="50"
+  layout="fixed"
+  alt="HIT-vendor-ICON">
+</amp-img></div>
+<h3 class="service-title" >HIT Vendors</h3>
+<p class="card-para">Software development, quality assurance, and certification services for the US healthcare market.</p>
+    </a>
+    <a href="#" class="market-card">
+<div class="card-wrap"><amp-img src="/payers-icon.png"
+  width="50"
+  height="50"
+  layout="fixed"
+  alt="HIT-vendor-ICON">
+</amp-img></div>
+<h3 class="service-title" >Payers</h3>
+<p class="card-para">Achieve painless integration with the ecosystem; risk containment through data-driven decision-making.</p>
+    </a>
+    <a href="#" class="market-card">
+<div class="card-wrap"><amp-img src="/providers-icon.png"
+  width="50"
+  height="50"
+  layout="fixed"
+  alt="HIT-vendor-ICON">
+</amp-img></div>
+<h3 class="service-title" >Providers</h3>
+<p class="card-para">Add the magic touch of mHealth, telehealth, remote patient monitoring, IoMT, and more to your healthcare practice.</p>
+    </a>
+    <a href="#" class="market-card">
+<div class="card-wrap"><amp-img src="/medical-device-icon.png"
+  width="50"
+  height="50"
+  layout="fixed"
+  alt="HIT-vendor-ICON">
+</amp-img></div>
+<h3 class="service-title" >Medical Devices</h3>
+<p class="card-para">Build your legacy by going digital, modernizing IT, achieving compliance and enhancing operations.</p>
+    </a>
+   </div>
+   <amp-selector class="tabs-with-flex" role="tablist" keyboard-select-mode="focus">
+    <div id="tab1" role="tab" aria-controls="tabpanel1" option selected>Healthcare View</div>
+    <div id="tabpanel1" role="tabpanel" aria-labelledby="tab1">
+      <amp-carousel type="slides"
+      width="386"
+      height="300"
+      controls
+      loop
+      autoplay
+      delay="2000"  data-next-button-aria-label="Go to next slide"
+      data-previous-button-aria-label="Go to previous slide"
+      role="region"
+      aria-label="Looping carousel">
+      <div>
+        <div>
+          <div class="view-card-text">Standards</div>
+        <div>
+          <ul>
+            <li>HL7 V2/3, CCDA</li>
+            <li>FHIR</li>
+            <li>DIRECT</li>
+            <li>EDI X12</li>
+            <li>NCPDP</li>
+            <li>DICOM</li>
+            <li>IHE</li>
+            <li>QRDA</li>
+          </ul>
+        </div>
+        </div>
+      </div>
+      <amp-img src="/s-back-2.png"
+        width="450"
+        height="300"></amp-img>
+      <amp-img src="/s-back-3.png"
+        width="450"
+        height="300"></amp-img>
+    </amp-carousel>
+    </div>
+    <div id="tab2" role="tab" aria-controls="tabpanel2" option>Technical View</div>
+    <div id="tabpanel2" role="tabpanel" aria-labelledby="tab2">Tab two content... </div>
+  </amp-selector>
+
+ 
+<div>
+  <h2 class="sub-heading">
+    Who Are We?
+  </h2>
+  <p class="sub-para">
+    <span class="who-span">Nalashaa</span>
+     is a team of passionate healthcare technocrats with experience spanning clinical, financial, and administrative areas. We design and develop simple yet effective workflows to help our clients transform bright ideas into delightful solutions. Our experience has shaped our software development practices to ensure consistent quality with low overheads. We are accountable for our deliverables, just like you are for patients.
+                
+  </p>
+ <div class="cta-wrap">
+   <a href="#" class="main-cta">Know more</a>
+ </div>
+</div>
+<div class="feedback-section">
+  <div class="feedback-div">
+    <h2 class="sub-heading">We understand your healthcare context </h2>
+    <p class="feedback-div-text">It helps us craft tactful healthcare solutions for your needs</p>
+  </div>
+  <amp-carousel height="600" layout="fixed-height" type="slides" role="region" aria-label="Carousel with arbitrary HTML content" autoplay delay="20000" loop>
+    <div>
+      <div class="feedback-cards">
+        <div class="text-wrapper">
+         <div class="feedback-wrap">
+          <amp-img src="/quote.png"
+          width="55"
+          height="55"
+          layout="fixed"
+          alt="feedback-logo">
+        </amp-img>
+      <p class="feedback-text">Nalashaa has been a great business partner and asset to our software development efforts. Their attention to detail and broad experience helps us to continually offer products that compete in today’s market. From design to performance to security they have continually contributed expert knowledge and skill. As a small and growing company, they add to our talent in areas that we cannot dedicate a sole resource for in-house. Their dedication to professionalism shows in all they do and is awesome to experience and work with.</p>
+      <strong>Netsmart</strong>
+         </div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div class="feedback-cards">
+        <div class="text-wrapper">
+         <div class="feedback-wrap">
+          <amp-img src="/quote.png"
+          width="55"
+          height="55"
+          layout="fixed"
+          alt="feedback-logo">
+        </amp-img>
+      <p class="feedback-text">Nalashaa has been a great business partner and asset to our software development efforts. Their attention to detail and broad experience helps us to continually offer products that compete in today’s market. From design to performance to security they have continually contributed expert knowledge and skill. As a small and growing company, they add to our talent in areas that we cannot dedicate a sole resource for in-house. Their dedication to professionalism shows in all they do and is awesome to experience and work with.</p>
+      <strong>Netsmart</strong>
+         </div>
+        </div>
+      </div>
+    </div>
+    <div class="feedback-section">
+      <div class="feedback-cards">
+        <div class="text-wrapper">
+         <div class="feedback-wrap">
+          <amp-img src="/quote.png"
+          width="55"
+          height="55"
+          layout="fixed"
+          alt="feedback-logo">
+        </amp-img>
+      <p class="feedback-text">Nalashaa has been a great business partner and asset to our software development efforts. Their attention to detail and broad experience helps us to continually offer products that compete in today’s market. From design to performance to security they have continually contributed expert knowledge and skill. As a small and growing company, they add to our talent in areas that we cannot dedicate a sole resource for in-house. Their dedication to professionalism shows in all they do and is awesome to experience and work with.</p>
+      <strong>Netsmart</strong>
+         </div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div class="feedback-cards">
+        <div class="text-wrapper">
+         <div class="feedback-wrap">
+          <amp-img src="/quote.png"
+          width="55"
+          height="55"
+          layout="fixed"
+          alt="feedback-logo">
+        </amp-img>
+      <p class="feedback-text">Nalashaa has been a great business partner and asset to our software development efforts. Their attention to detail and broad experience helps us to continually offer products that compete in today’s market. From design to performance to security they have continually contributed expert knowledge and skill. As a small and growing company, they add to our talent in areas that we cannot dedicate a sole resource for in-house. Their dedication to professionalism shows in all they do and is awesome to experience and work with.</p>
+      <strong>Netsmart</strong>
+         </div>
+        </div>
+      </div>
+    </div>
+  </amp-carousel>
+</div>
+<div>
+  <div>
+    <h2 class="sub-heading">Explore and read up</h2>
+  </div>
+  <amp-selector class="tabs-with-flex" role="tablist" keyboard-select-mode="focus">
+    <div id="tab1" role="tab" aria-controls="tabpanel1" option selected>Case study</div>
+    <div id="tabpanel1" role="tabpanel" aria-labelledby="tab1"><div>
+      <div class="resource-card">
+        <amp-img src="appy-health-cs-thumb.jpg"
+          width="150"
+          height="150"
+          layout="responsive"
+          alt="">
+        </amp-img>
+        <div class="resource-text"><strong>Nalashaa Helped a HIT Solution Provider Decrease the Time Taken in Eligibility Verificaton by 40%</strong></div>
+      </div>
+    </div> </div>
+    <div id="tab2" role="tab" aria-controls="tabpanel2" option>Whitepaper</div>
+    <div id="tabpanel2" role="tabpanel" aria-labelledby="tab2">Tab two content... </div>
+    <div id="tab3" role="tab" aria-controls="tabpanel3" option>Blog</div>
+    <div id="tabpanel3" role="tabpanel" aria-labelledby="tab3">Tab three content... </div>
+  </amp-selector>
+</div>
+<amp-carousel height="500" layout="fixed-height" type="slides" role="region" aria-label="Carousel with arbitrary HTML content" autoplay delay="20000" loop></amp-carousel>
+  </body>
+</html>
