@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body style="display: flex;justify-content: center;align-items: center;height: 100vh;">
+  <div>
+    
+    
+  </div>
+  <div class="exit-pop" style="    flex-direction: column;
+  justify-content: space-between;padding: 30px;background-color: #2B2F3E;">
+  <div style="display: flex; justify-content: flex-end;">
+   <a class="Btn" href="#!"> <img src="Close.png" alt=""></a>
+  </div>
+   <h2 style="color: #fff;font-size: 54px;font-weight: 600;">Schedule a<br>
+    Free Consultation</h2>
+    <div style="display: flex;">
+      <input type="text" placeholder="enter yout mobile number" id="phone" style="min-height: 50px;width: 100%;margin-right: 6px;padding-left: 15px;font-size: 19px;">
+      <button type="submit" style="background-color: #2FE7BE;color: #000;min-height: 50px;min-width: 170px;border: none;font-size: 19px;font-weight: 500;">Schedule it</button>
+    </div>
+    <div style="margin-top: 50px;">
+      <a class="Btn2" href="#!" style="color: #2FE7BE;">No Thanks</a>
+    </div>
+  <script>
+    const modal = document.querySelector('.exit-pop');
+const closeBtn = document.querySelector('.Btn');
+const NoThanks = document.querySelector('.Btn2');
+
+function showPopup(event) {
+  if (event.clientX < 170 && event.clientY < 170) {
+    modal.classList.add("exit-pop-active");
+    window.removeEventListener('mousemove', showPopup);
+  }
+}
+
+function delayedWindowListener() {
+  setTimeout(function() {
+    window.addEventListener('mousemove', showPopup);
+  }, 10000);
+}
+
+delayedWindowListener();
+
+closeBtn.addEventListener('click', () => {
+  modal.classList.remove('exit-pop-active');
+});
+NoThanks.addEventListener('click', () => {
+  modal.classList.remove('exit-pop-active');
+});
+
+  </script>
+<style>
+  .exit-pop{
+    display: none;
+    min-width: 600px;
+    min-height: 400px;
+    position: fixed;
+  }
+  .exit-pop-active{
+    height: 500px;
+    width: 600px;
+    background: #fff;
+    display: block;
+  }
+  .exit-pop-img{
+    background-color: #E7FFF3;
+    width: 100%;
+    justify-content: center;
+    display: flex;
+    padding-top: 33px;
+    padding-bottom: 33px;
+  }
+</style>
+
+</body>
+</html>
