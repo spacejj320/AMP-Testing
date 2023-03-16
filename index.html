@@ -500,6 +500,10 @@ margin-bottom: 10px;
     margin: auto;
     padding: 60px 0;
 }
+      .url-change{
+  visibility: hidden;
+}
+
 
 /* faq */
 
@@ -1400,7 +1404,23 @@ Get in touch
         </div>
       </div>
     </footer>
-
+ <amp-script script="myScript" layout="container">
+    <p class="url-change">ji</p>  
+    </amp-script>
+    <script type="text/plain" target="amp-script" id="myScript">
+      window.addEventListener('DOMContentLoaded', function() {
+        var url = window.location.href;
+        var newUrl = url.replace(/\/?(\?|#|$)/, '/$1').toLowerCase();
+        ChangeUrl(window.location.page, newUrl);
+    });
+    
+    function ChangeUrl(page, url) {
+        if (typeof (history.pushState) != "undefined") {
+            var obj = { Page: page, Url: url };
+            history.pushState(obj, obj.Page, obj.Url);
+        }
+    }
+    </script>
 
 
   </body>
